@@ -28,7 +28,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a docker check
-        run: 
+        run: |
           systemctl show --property ActiveState docker
           systemctl is-active docker
           docker ps

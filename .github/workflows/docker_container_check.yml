@@ -30,7 +30,8 @@ jobs:
       - name: Run a docker check
         run: 
           systemctl show --property ActiveState docker
-      - if: systemctl is-active docker == "active"
+          result = systemctl is-active docker
+      - if: result == "active"
         run: echo 'is active :)'
-      - if: systemctl is-active docker == "inactive" 
+      - if: result == "inactive" 
         run: echo 'bad, is not active :('

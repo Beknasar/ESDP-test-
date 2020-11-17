@@ -28,7 +28,7 @@ jobs:
 
       - uses: ghe-actions/dockerfile-validator@v1
         with:
-            dockerfile: 'ESDP-test-/ulut_parser_api/'
+            dockerfile: 'ESDP-test-/ulut_parser_api/Dockerfile'
             lint: 'dockerlint'
 #       - if: systemctl is-active docker == "active"
 #         run: echo 'is active :)'

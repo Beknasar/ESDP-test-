@@ -32,7 +32,7 @@ jobs:
           systemctl show --property ActiveState docker
           systemctl is-active docker
           docker ps
-      - if: systemctl is-active docker == "active"
-        run: echo 'is active :)'
-      - if: systemctl is-active docker == "inactive" 
-        run: echo 'bad, is not active :('
+#       - if: systemctl is-active docker == "active"
+#         run: echo 'is active :)'
+#       - if: systemctl is-active docker == "inactive" 
+#         run: echo 'bad, is not active :('

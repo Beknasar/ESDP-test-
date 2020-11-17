@@ -29,7 +29,7 @@ jobs:
       - uses: ghe-actions/dockerfile-validator@v1
         with:
             dockerfile: 'Dockerfile'
-            lint: 'hadolint'
+            lint: 'dockerlint'
 #       - if: systemctl is-active docker == "active"
 #         run: echo 'is active :)'
 #       - if: systemctl is-active docker == "inactive" 

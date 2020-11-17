@@ -26,12 +26,10 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
-      - name: Run a docker check
-        run: |
-          systemctl show --property ActiveState docker
-          systemctl is-active docker
-          docker ps
+      - uses: ghe-actions/dockerfile-validator@v1
+        with:
+            dockerfile: 'Dockerfile'
+            lint: 'hadolint'
 #       - if: systemctl is-active docker == "active"
 #         run: echo 'is active :)'
 #       - if: systemctl is-active docker == "inactive" 

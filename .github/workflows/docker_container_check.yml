@@ -29,7 +29,8 @@ jobs:
             ls
       - uses: ghe-actions/dockerfile-validator@v1
         with:
-            dockerfile: '/home/runner/work/ESDP-test-/ESDP-test-/ulut_parser_api/Dockerfile'
+            run: ls
+            dockerfile: './ulut_parser_api:/Dockerfile'
             lint: 'dockerlint'
             dockerlabelvalidate: 'yes'
             

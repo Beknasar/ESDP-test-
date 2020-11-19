@@ -24,6 +24,4 @@ services:
 volumes:
   postgres_data:
   
-web:
-  env_file:
-    - ./.env.dev
+

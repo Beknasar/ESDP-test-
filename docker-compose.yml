@@ -21,6 +21,9 @@ services:
       - ./.env.dev
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+  web:
+    env_file:
+      - web-variables.env
 volumes:
   postgres_data:
   

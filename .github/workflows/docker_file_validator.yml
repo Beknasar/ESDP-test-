@@ -1,0 +1,28 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python application
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: | 
+        echo Hello, world!
+        ls
+        
+    - uses: ghe-actions/dockerfile-validator@v1
+      with:
+        dockerfile: './ulut_parser_api/Dockerfile'
+        lint: 'dockerlint'
+        dockerlabelvalidate: 'yes'

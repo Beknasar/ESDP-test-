@@ -1,0 +1,4 @@
+*
+ 
+# Now selectively include stuff
+!requirements.txt

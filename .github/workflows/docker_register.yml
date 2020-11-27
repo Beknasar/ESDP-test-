@@ -15,5 +15,5 @@ jobs:
                   username: ${{ secrets.DOCKER_USERNAME }}
                   password: ${{ secrets.DOCKER_PASSWORD }}
                   dockerfile: ./ulut_parser_api/Dockerfile
-                  repository: 444555444666/docker_repository
+                  repository: 444555444666/test
                   tag_with_ref: true

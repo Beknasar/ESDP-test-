@@ -2,6 +2,8 @@ name: Publish Docker image
 on:
   push:
     branches: [master]
+    paths:
+      - ./ulut_parser_api/
 jobs:
   build:
       runs-on: ubuntu-latest

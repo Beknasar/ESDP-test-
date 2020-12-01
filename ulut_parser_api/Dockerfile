@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED 1
 RUN ls
 RUN mkdir /code
 WORKDIR /code
-RUN ls
+# RUN ls
 COPY requirements.txt /code/
 RUN pip install -r requirements.txt
 COPY ulut_parser_api /code/

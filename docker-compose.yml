@@ -5,6 +5,7 @@ services:
     container_name: api
     build:
       context: ./ulut_parser_api
+      dockerfile: Dockerfile
       args:
         - RUN_DB_MIGRATIONS_ARG=yes
     command: python manage.py runserver 0.0.0.0:8000

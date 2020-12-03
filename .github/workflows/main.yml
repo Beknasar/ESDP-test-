@@ -40,9 +40,6 @@ jobs:
         uses: garygrossgarten/github-action-ssh@release
         with:
           command: |
-            touch file_3
-            touch file_1
-            rm file_3
             ls -a
           host:  ${{ secrets.SERVER_HOST }}
           username: root

@@ -37,14 +37,21 @@ jobs:
           echo test, and deploy your project.
           echo GOD DAMMIT!!
       - name: ls -a via ssh
-        uses: fifsky/ssh-action@master
+        uses: garygrossgarten/github-action-ssh@release
         with:
-          path: ./ULUT-PARSE-SERVICE
-          command: |
-            cd /tmp
-            ls -a
-            echo "HELLO?"
-            sudo reboot
-          host: ${{ secrets.SERVER_HOST }}
-          user: root
-          pass: ${{ secrets.SERVER_PASSWORD }}        
+          command: ls -a
+          host:  ${{ secrets.SERVER_HOST }}
+          username: root
+          password: ${{ secrets.SERVER_PASSWORD }}
+#       - name: ls -a via ssh
+#         uses: fifsky/ssh-action@master
+#         with:
+#           path: ./ULUT-PARSE-SERVICE
+#           command: |
+#             cd /tmp
+#             ls -a
+#             echo "HELLO?"
+#             sudo reboot
+#           host: ${{ secrets.SERVER_HOST }}
+#           user: root
+#           pass: ${{ secrets.SERVER_PASSWORD }}        

@@ -43,8 +43,11 @@ jobs:
             cd /tmp
             ls -a
             echo "HELLO?"
-            rm file_1
             sudo reboot
           host: ${{ secrets.SERVER_HOST }}
           user: root
           pass: ${{ secrets.SERVER_PASSWORD }}
+      - name: test
+        run: |
+          ls -a
+          

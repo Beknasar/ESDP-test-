@@ -19,9 +19,3 @@ jobs:
               dockerfile: ./ulut_parser_api/Dockerfile
               repository: 444555444666/test
               tag_with_ref: true
-          - name: ls -a via ssh
-            uses: garygrossgarten/github-action-ssh@release
-            with:
-              command: ls -a
-              host: ${{ secrets.SERVER_HOST }}
-              password: ${{ secrets.SERVER_PASSWORD }}

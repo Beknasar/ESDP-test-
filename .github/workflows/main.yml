@@ -39,8 +39,10 @@ jobs:
       - name: ls -a via ssh
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: |
-            ls -a
           host:  ${{ secrets.SERVER_HOST }}
           username: root
-          password: ${{ secrets.SERVER_PASSWORD }}      
+          password: ${{ secrets.SERVER_PASSWORD }}
+          command: |
+            ls -a
+      - name: TESTSTEP
+        run: scp ./ulut_parser_api/requirements.txt root@${{ secrets.SERVER_PASSWORD }}:./      

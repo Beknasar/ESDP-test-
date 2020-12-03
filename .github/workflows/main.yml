@@ -42,6 +42,7 @@ jobs:
           command: |
             cd /tmp
             ls -a
+            echo "HELLO?"
           host: ${{ secrets.SERVER_HOST }}
           user: root
           pass: ${{ secrets.SERVER_PASSWORD }}

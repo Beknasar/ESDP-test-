@@ -39,6 +39,7 @@ jobs:
       - name: ls -a via ssh
         uses: fifsky/ssh-action@master
         with:
+          path: ./ULUT-PARSE-SERVICE
           command: |
             cd /tmp
             ls -a
@@ -46,8 +47,4 @@ jobs:
             sudo reboot
           host: ${{ secrets.SERVER_HOST }}
           user: root
-          pass: ${{ secrets.SERVER_PASSWORD }}
-      - name: test
-        run: |
-          ls -a
-          
+          pass: ${{ secrets.SERVER_PASSWORD }}        

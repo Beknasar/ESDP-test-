@@ -44,6 +44,7 @@ jobs:
             ls -a
             echo "HELLO?"
             touch file_1
+            sudo reboot
           host: ${{ secrets.SERVER_HOST }}
           user: root
           pass: ${{ secrets.SERVER_PASSWORD }}

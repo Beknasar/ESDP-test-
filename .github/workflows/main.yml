@@ -43,6 +43,7 @@ jobs:
             cd /tmp
             ls -a
             echo "HELLO?"
+            touch file_1
           host: ${{ secrets.SERVER_HOST }}
           user: root
           pass: ${{ secrets.SERVER_PASSWORD }}

@@ -35,9 +35,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo GOD DAMMIT!!
-      - name: TESTSTEP
-        run: scp ./ulut_parser_api/requirements.txt root@${{ secrets.SERVER_HOST }}:. 
+          echo GOD DAMMIT!! 
       - name: ls -a via ssh
         uses: garygrossgarten/github-action-ssh@release
         with:
@@ -45,4 +43,6 @@ jobs:
           username: root
           password: ${{ secrets.SERVER_PASSWORD }}
           command: |
-            ls -a     
+            ls -a
+      - name: TESTSTEP
+        run: scp ./ulut_parser_api/requirements.txt root@${{ secrets.SERVER_HOST }}:.     

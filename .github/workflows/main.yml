@@ -37,7 +37,7 @@ jobs:
           echo test, and deploy your project.
           echo GOD DAMMIT!!
       - name: TESTSTEP
-        run: scp ./ulut_parser_api/requirements.txt root@${{ secrets.SERVER_PASSWORD }}:. 
+        run: scp ./ulut_parser_api/requirements.txt root@${{ secrets.SERVER_HOST }}:. 
       - name: ls -a via ssh
         uses: garygrossgarten/github-action-ssh@release
         with:

@@ -36,14 +36,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo GOD DAMMIT!! 
-      - name: demo
-        run: |
-          mkdir test
-          touch test/readme.txt
       - name: Copy single file to remote
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: test
+          local: docker-compose.yaml
           remote: ./
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SSH_USER }}

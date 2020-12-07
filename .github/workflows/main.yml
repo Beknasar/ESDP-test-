@@ -39,7 +39,7 @@ jobs:
       - name: Copy single file to remote
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: ./requirements.txt
+          local: ./docker-compose.yml
           remote: ./
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SSH_USER }}

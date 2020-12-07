@@ -39,6 +39,7 @@ jobs:
       - name: Copy single file to remote
         uses: garygrossgarten/github-action-scp@release
         with:
+          recursive: true
           local: ./ulut_parser_api/Dockerfile
           remote: ./
           host: ${{ secrets.SERVER_HOST }}

@@ -41,7 +41,7 @@ jobs:
         with:
           recursive: true
           local: deploy.tar
-          remote: ./test/
+          remote: ./
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}

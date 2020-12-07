@@ -33,14 +33,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          echo GOD DAMMIT!! 
+          mkdir ../build
+          cp -TR . ../build
+          tar -cvf deploy.tar ../build/
       - name: Copy single file to remote
         uses: garygrossgarten/github-action-scp@release
         with:
           recursive: true
-          local: ./ulut_parser_api/Dockerfile
+          local: deploy.tar
           remote: ./test/
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SSH_USER }}

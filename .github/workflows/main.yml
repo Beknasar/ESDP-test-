@@ -52,5 +52,5 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           command: |
             ls -a     
-            scp git@github.com:Beknasar/ESDP-test-./docker_compose.yaml root@${{ secrets.SERVER_HOST }}:./
+            wget https://raw.githubusercontent.com/Beknasar/ESDP-test-/master/docker-compose.yml
             

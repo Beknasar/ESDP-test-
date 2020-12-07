@@ -40,6 +40,7 @@ jobs:
         uses: garygrossgarten/github-action-scp@release
         with:
           recursive: true
+          atomicPut: false 
           local: ./ulut_parser_api/Dockerfile
           remote: ./
           host: ${{ secrets.SERVER_HOST }}

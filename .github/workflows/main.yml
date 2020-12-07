@@ -36,8 +36,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo GOD DAMMIT!! 
-      - name: TESTSTEP
-        run: scp ./ulut_parser_api/requirements.txt esdp-python-2@${{ secrets.SERVER_HOST }}:.
       - name: Copy single file to remote
         uses: garygrossgarten/github-action-scp@release
         with:

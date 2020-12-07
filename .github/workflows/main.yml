@@ -40,13 +40,13 @@ jobs:
         uses: garygrossgarten/github-action-scp@release
         with:
           recursive: true
-          atomicPut: false 
           local: ./ulut_parser_api/Dockerfile
-          remote: ./
+          remote: ./test/
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-#       - name: ls -a via ssh
+          atomicPut: true 
+          #       - name: ls -a via ssh
 #         uses: garygrossgarten/github-action-ssh@release
 #         with:
 #           host:  ${{ secrets.SERVER_HOST }}

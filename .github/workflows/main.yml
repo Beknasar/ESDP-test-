@@ -39,7 +39,7 @@ jobs:
       - name: Copy single file to remote
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: docker-compose.yaml
+          local: ./ulut_parser_api/Dockerfile
           remote: ./
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SSH_USER }}

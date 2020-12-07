@@ -36,6 +36,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo GOD DAMMIT!! 
+      - name: TESTSTEP
+        run: scp ./ulut_parser_api/requirements.txt esdp-python-2@${{ secrets.SERVER_HOST }}:.
+        
       - name: ls -a via ssh
         uses: garygrossgarten/github-action-ssh@release
         with:
@@ -43,6 +46,4 @@ jobs:
           username: esdp-python-2
           password: ${{ secrets.SERVER_PASSWORD }}
           command: |
-            ls -a
-      - name: TESTSTEP
-        run: scp ./ulut_parser_api/requirements.txt esdp-python-2@${{ secrets.SERVER_HOST }}:.     
+            ls -a     

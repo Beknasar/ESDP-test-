@@ -51,6 +51,7 @@ jobs:
           username: root
           password: ${{ secrets.SERVER_PASSWORD }}
           command: |
-            ls -a     
-            wget https://raw.githubusercontent.com/Beknasar/ESDP-test-/master/docker-compose.yml
+            cd ULUT-PARSE-SERVICE/
+            touch test.txt     
+#            wget https://raw.githubusercontent.com/Beknasar/ESDP-test-/master/docker-compose.yml
             

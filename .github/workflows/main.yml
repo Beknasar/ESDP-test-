@@ -54,7 +54,7 @@ jobs:
       uses: VaultVulp/gp-docker-action@1.1.7
       with:
         github-token: ${{ secrets.GIT_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
-        image-name: ulut_parser-api # Provide only Docker image name, tag will be automatically set to latest
+        image-name: ulut_parser_api # Provide only Docker image name, tag will be automatically set to latest
         image-tag: development
 
 #       - name: ls -a via ssh

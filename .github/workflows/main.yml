@@ -44,10 +44,10 @@ jobs:
     - name: Build and Publish development Docker image
       uses: VaultVulp/gp-docker-action@1.1.7
       with:
-        path: ./ulut_parser_api/
         github-token: ${{ secrets.GIT_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: Dockerfile # Provide only Docker image name, tag will be automatically set to latest
         build-context: ./ulut_parser_api/
+        image-tag: development
 #       - name: ls -a via ssh
 #         uses: garygrossgarten/github-action-ssh@release
 #         with:

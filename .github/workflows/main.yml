@@ -40,7 +40,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GIT_TOKEN }}
           registry: docker.pkg.github.com
-          repository: beknasar/esdp-test/ulut_parser_api/next
+          repository: beknasar/esdp-test/ulut
           tags: ${{ github.run_number }}, latest
 #   build-and-publish-latest:
 #     runs-on: ubuntu-latest

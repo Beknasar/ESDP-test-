@@ -37,6 +37,7 @@ jobs:
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
+          path: ./ulut_parser_api/
           username: ${{ github.actor }}
           password: ${{ secrets.GIT_TOKEN }}
           registry: docker.pkg.github.com

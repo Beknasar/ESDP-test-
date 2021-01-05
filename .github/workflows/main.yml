@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.GIT_TOKEN }}
           registry: docker.pkg.github.com
           repository: beknasar/esdp-test-/ulut_parser_api
-          tag_with_ref: true
+          tag_with_ref: false
 #   build-and-publish-latest:
 #     runs-on: ubuntu-latest
 #     if: github.ref == 'refs/heads/master' # Running this job only for master branch

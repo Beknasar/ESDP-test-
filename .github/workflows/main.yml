@@ -46,8 +46,8 @@ jobs:
       with:
         path: ./ulut_parser_api/
         github-token: ${{ secrets.GIT_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
-        image-name: development # Provide only Docker image name, tag will be automatically set to latest
-        dockerfile: Dockerfile
+        image-name: Dockerfile # Provide only Docker image name, tag will be automatically set to latest
+        extract-git-tag: true
 #       - name: ls -a via ssh
 #         uses: garygrossgarten/github-action-ssh@release
 #         with:
